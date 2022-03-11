@@ -48,7 +48,7 @@
                </div>
                <div class="content_text">
                   <ul class="list_ul">
-                     <?php foreach($categorypostbyid as $key => $value) {?>
+                     <?php foreach($listpost as $key => $value) {?>
                      <li class="lists ">
                         <div class="img-list">
                            <a href="tin-tuc/so-sanh-cong-nghe-hien-thi-3lcd-va-dlp-425.html">

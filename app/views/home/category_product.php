@@ -40,7 +40,7 @@
             </div>
             <div class="pro_all_gird">
                <div class="girds_all list_all_other_page ">
-                  <?php foreach($categorybyid as $key =>  $value) {
+                  <?php foreach($all_product as $key =>  $value) {
                     ?>
                      
                   <div class="grids">

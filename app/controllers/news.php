@@ -17,7 +17,17 @@
             
         }
 
-        public function list($id)
+        public function list()
+        {
+            $table_post = "post";
+            $data['listpost'] = $this -> post_model -> list_post($table_post);
+            $this -> load -> view('home/category_post',$data);
+            $this -> load -> view('layouts/footer');
+        }
+
+
+
+        public function listbyid($id)
         {
             $table_category = "category_post";
             $table_post = "post";

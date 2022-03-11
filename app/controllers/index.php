@@ -33,23 +33,12 @@
             $this->load->view('layouts/footer');
         }
 
-        public function category_product()
-        {
-            $this -> load -> view('home/category_product');
-            $this -> load -> view('layouts/footer');
-        }
-
         public function detail_product()
         {
             $this -> load -> view('home/detail_product');
             $this -> load -> view('layouts/footer');
         }
 
-        public function category_post()
-        {
-            $this -> load -> view('home/category_post');
-            $this -> load -> view('layouts/footer');
-        }
 
         public function detail_post()
         {

@@ -15,6 +15,15 @@
         $this->load->view('layouts/header',$data);
     }
 
+        public  function danhsach()
+        {
+            $table_product = "product";
+            $product_model = $this -> load -> model('productmodel');
+            $data['all_product'] =  $product_model -> list_product($table_product);
+            $this -> load -> view('home/category_product',$data);
+            $this -> load -> view('layouts/footer');
+        }
+
      public function danhmuc($id)
      {
         $table_category ="category_product";
