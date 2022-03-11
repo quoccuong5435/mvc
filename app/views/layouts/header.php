@@ -128,7 +128,7 @@
                                     <li class=''><a href='chitiettin.php'>Giới thiệu</a></li>
                                     <li class=''>
 
-                                        <a href='sanpham.php'>Sản phẩm</a>
+                                        <a href='<?php echo BASE_URL ?>index/category_product'>Sản phẩm</a>
 
                                         <ul>
                                             <?php foreach($category as $key => $value)
@@ -156,7 +156,7 @@
                                             {
 
                                             ?>
-                                            <li><a href='<?php echo BASE_URL ?>sanpham/danhmuc/<?php echo $value['id'] ?>'><span><?php echo $value['title'] ?></span></a>
+                                            <li><a href='<?php echo BASE_URL ?>news/list/<?php echo $value['id'] ?>'><span><?php echo $value['title'] ?></span></a>
                                                 
                                             </li>
                                             <?php }?>

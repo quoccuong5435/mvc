@@ -48,28 +48,31 @@
                </div>
                <div class="content_text">
                   <ul class="list_ul">
-                     <li class="lists">
+                     <?php foreach($categorypostbyid as $key => $value) {?>
+                     <li class="lists ">
                         <div class="img-list">
                            <a href="tin-tuc/so-sanh-cong-nghe-hien-thi-3lcd-va-dlp-425.html">
-                           <img src="<?php  echo BASE_URL ?>public/image/iphone.png" alt="So sánh công nghệ hiển thị 3LCD và DLP" class="img-list-in">
+                           <img style="height: 100px; width: 100px;" src="<?php  echo BASE_URL ?>public/uploads/post/<?php echo $value['image_post'] ?>" alt="So sánh công nghệ hiển thị 3LCD và DLP" class="img-list-in">
                            </a>
                         </div>
                         <div class="content-list">
                            <div class="content-list_inm">
                               <div class="title-list">
                                  <h3>
-                                    <a href="tin-tuc/so-sanh-cong-nghe-hien-thi-3lcd-va-dlp-425.html">So sánh công nghệ hiển thị 3LCD và DLP</a>
+                                    <a href="tin-tuc/so-sanh-cong-nghe-hien-thi-3lcd-va-dlp-425.html"><?php echo $value['name_post'] ?></a>
                                  </h3>
                                  <p class="list-news-status-p">
-                                    <a title="Thiết bị văn phòng">Thiết bị văn phòng</a> | <a title="26-12-2017" >26-12-2017</a>
+                                    <a title="Thiết bị văn phòng"><?php echo $value['title'] ?></a> | <a title="26-12-2017" >26-12-2017</a>
                                  </p>
                               </div>
                               <div class="content-list-in">
-                                 <p><span style="font-size:16px">Với lĩnh vực máy chiếu, hầu như các dòng sản phẩm máy chiếu trên thị trường sử dụng một trong hai công nghệ hiển thị hình ảnh phổ biến là công nghệ 3LCD và công nghệ DLP. Hiện nay, trong số các sản phẩm máy chiếu laser được sử dụng để trình chiếu dữ liệu thì duy chỉ có hãng <strong><a href="https://thietbivanphong123.com/san-pham/may-chieu-sony-c86.html" style="color:#000;text-decoration:none;">máy chiếu Sony</a></strong> sử dụng công nghệ hiển thị 3LCD còn các hãng khác như NEC, Optoma, Panasonic lại sử dụng công nghệ DLP.</span></p>
-                              </div>
+                                 <p><span style="font-size:16px"><?php echo substr( $value['description_post'],0,200) ?></span></p>
+                                </div>
                               <div class="xt"><a href="tin-tuc/so-sanh-cong-nghe-hien-thi-3lcd-va-dlp-425.html">Xem thêm</a></div>
                            </div>
                         </div>
+                        <?php } ?>
+
                         <div class="clear"></div>
                      </li>
                   </ul>

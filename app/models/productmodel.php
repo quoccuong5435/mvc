@@ -37,5 +37,10 @@
             $sql = "SELECT * FROM $table_1, $table_2 where $table_1.id = $table_2.id_category_product ";
             return $this -> db -> select($sql);
         }
+        public function selectCategoryById($table_1, $table_2,$condition)
+        {
+            $sql = "SELECT * from $table_2, $table_1  where $condition ";
+            return $this -> db -> select($sql);
+        }
     }
 ?>

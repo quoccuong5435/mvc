@@ -17,8 +17,12 @@
 
      public function danhmuc($id)
      {
-        
-         $this -> load -> view("home/category_product");
+        $table_category ="category_product";
+         $table_product = "product";
+         $condition = "$table_category.id = $id and $table_product.id_category_product = $table_category.id ";
+         $product_model = $this -> load -> model('productmodel');
+         $data['categorybyid'] = $product_model -> selectCategoryById($table_product, $table_category, $condition);
+         $this -> load -> view("home/category_product",$data);
          $this -> load -> view('layouts/footer');
      }
  }

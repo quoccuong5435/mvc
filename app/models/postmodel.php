@@ -38,5 +38,11 @@
             $sql = "select * from $table_category, $table where  $table_category.id = $table.id_category_post ";
             return $this ->db -> select($sql);
         }
+
+        public function selectCategoryById($table_1, $table_2 , $condition)
+        {
+            $sql = "select * from $table_1, $table_2 where $condition";
+            return $this -> db -> select($sql);
+        }
     }
 ?>
