@@ -17,9 +17,15 @@
 
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 
-                           <a itemprop="item" href="sanpham.php">
-
-                           <span itemprop="name">Iphone</span></a>
+                           <a itemprop="item" href="">
+                           <?php $name ="";
+                                 foreach($categorybyid as $key => $values)
+                              {
+                                 $name = $values['product_name'];
+                              }
+                              ?>
+                            <span itemprop="name"><?php echo $name ?></span></a>
+                        
 
                            <meta itemprop="position" content="2" />
 
@@ -32,7 +38,10 @@
          <div class="module_pro_all">
             <div class="box-title">
                <div class="title-bar">
-                  <h1>Danh mục : IPHONE</h1>
+                 
+                  
+                  <h1>Danh mục :<?php echo $name ?></h1>
+                  
                   <a class="read_more" href="">
                   Xem thêm
                   </a>
@@ -40,7 +49,7 @@
             </div>
             <div class="pro_all_gird">
                <div class="girds_all list_all_other_page ">
-                  <?php foreach($all_product as $key =>  $value) {
+                  <?php foreach($categorybyid as $key =>  $value) {
                     ?>
                      
                   <div class="grids">
@@ -48,7 +57,7 @@
                         <div class="content">
                         <div class="img-right-pro">
                           
-                           <a href="<?php echo BASE_URL ?>index/detail_product">
+                           <a href="<?php echo BASE_URL ?>sanpham/chitietsanpham/<?php echo $value['id'] ?>">
                            <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $value['image_product'] ?>" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                            </a>
 
@@ -61,7 +70,7 @@
                            </div>
                         </div>
                         <div class="name-pro-right">
-                           <a href="<?php echo BASE_URL ?>index/detail_product">
+                           <a href="<?php echo BASE_URL ?>sanpham/chitietsanpham/<?php echo $value['id'] ?>">
                               <h3><?php echo $value['name_product'] ?></h3>
                            </a>
                         </div>

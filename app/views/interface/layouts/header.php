@@ -149,14 +149,14 @@
 
                                     <li class=''>
 
-                                        <a href='<?php echo BASE_URL ?>news/list'>Tin tức</a>
+                                        <a href='<?php echo BASE_URL ?>tintuc/danhsach'>Tin tức</a>
 
                                         <ul>
                                             <?php foreach($post as $key => $value)
                                             {
 
                                             ?>
-                                            <li><a href='<?php echo BASE_URL ?>news/listbyid/<?php echo $value['id'] ?>'><span><?php echo $value['title'] ?></span></a>
+                                            <li><a href='<?php echo BASE_URL ?>tintuc/danhmuc/<?php echo $value['id'] ?>'><span><?php echo $value['title'] ?></span></a>
                                                 
                                             </li>
                                             <?php }?>

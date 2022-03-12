@@ -32,7 +32,7 @@
                      itemtype="http://schema.org/ListItem">
                      <span itemprop="item">
                      <strong itemprop="name">
-                     Sản phẩm
+                     Tất cả tin tức
                      </strong>  
                      </span>
                      <meta itemprop="position" content="2" />
@@ -52,7 +52,7 @@
                      <li class="lists ">
                         <div class="img-list">
                            <a href="tin-tuc/so-sanh-cong-nghe-hien-thi-3lcd-va-dlp-425.html">
-                           <img style="height: 100px; width: 100px;" src="<?php  echo BASE_URL ?>public/uploads/post/<?php echo $value['image_post'] ?>" alt="So sánh công nghệ hiển thị 3LCD và DLP" class="img-list-in">
+                           <img style="height:200px; width: 200px;" src="<?php  echo BASE_URL ?>public/uploads/post/<?php echo $value['image_post'] ?>" alt="So sánh công nghệ hiển thị 3LCD và DLP" class="img-list-in">
                            </a>
                         </div>
                         <div class="content-list">

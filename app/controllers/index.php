@@ -11,45 +11,34 @@
             $data['post'] = $post_model -> list_post($table_post);
             $category_model = $this -> load -> model('categorymodel');
             $data['category'] = $category_model -> category($table_category);
-            $this->load->view('layouts/header',$data);
+            $this -> load -> view('interface/layouts/header',$data);
         }
          public function index()
          {
-              $this -> homepage();
+            $this -> load -> view('interface/layouts/slider');
+            $this -> load -> view('interface/home/index');
+            $this -> load -> view('interface/layouts/footer');
          }
 
-        public function homepage()
+        public function loadError()
         {
-            $this -> load -> view('home/slider');
-            $this->load->view('home/home');
-            $this->load->view('layouts/footer');
+            $this -> load -> view('interface/home/404');
+            $this -> load -> view('interface/layouts/footer');
         }
 
        
 
-        public function loadError()
-        {
-            $this->load->view('home/404');
-            $this->load->view('layouts/footer');
-        }
-
-        public function detail_product()
-        {
-            $this -> load -> view('home/detail_product');
-            $this -> load -> view('layouts/footer');
-        }
-
 
         public function detail_post()
         {
-            $this -> load -> view('home/detail_post');
-            $this -> load -> view('layouts/footer');
+            $this -> load -> view('interface/news/detail_post');
+            $this -> load -> view('interface/layouts/footer');
         }
 
         public function contact()
         {
-            $this -> load -> view('home/contact');
-            $this -> load -> view('layouts/footer');
+            $this -> load -> view('interface/home/contact');
+            $this -> load -> view('interface/layouts/footer');
         }
 
     }

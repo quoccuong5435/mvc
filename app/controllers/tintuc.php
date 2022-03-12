@@ -1,5 +1,5 @@
 <?php 
-    class news  extends Controller
+    class tintuc  extends Controller
     {
         // public $post_model, $category_model;
 
@@ -13,28 +13,28 @@
             $data['post'] = $post_model -> list_post($table_category);
             $category_model = $this -> load -> model('categorymodel');
             $data['category'] = $category_model -> category($table_category_product);
-            $this->load->view('layouts/header',$data);
+            $this->load->view('interface/layouts/header',$data);
             
         }
 
-        public function list()
+        public function danhsach()
         {
             $table_post = "post";
             $data['listpost'] = $this -> post_model -> list_post($table_post);
-            $this -> load -> view('home/category_post',$data);
-            $this -> load -> view('layouts/footer');
+            $this -> load -> view('interface/news/list_news',$data);
+            $this -> load -> view('interface/layouts/footer');
         }
 
 
 
-        public function listbyid($id)
+        public function danhmuc($id)
         {
             $table_category = "category_post";
             $table_post = "post";
             $condition = "$table_post.id_category_post = $table_category.id  and  $table_category.id = $id";
             $data['categorypostbyid'] = $this ->post_model -> selectCategoryById($table_post,$table_category,$condition);
-            $this -> load -> view('home/category_post',$data);
-            $this -> load -> view('layouts/footer');
+            $this -> load -> view('interface/news/category_post',$data);
+            $this -> load -> view('interface/layouts/footer');
         }
     }
 

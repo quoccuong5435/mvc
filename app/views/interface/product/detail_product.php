@@ -1,4 +1,6 @@
  <section>
+    <?php  foreach($detail as $key => $value)
+    {  ?>
          <div class="bg_in">
             <div class="wrapper_all_main">
                <div class="wrapper_all_main_right no-padding-left" style="width:100%;">
@@ -11,14 +13,14 @@
                            <meta itemprop="position" content="1" />
                         </li>
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                           <a itemprop="item" href="sanpham.php">
-                           <span itemprop="name">Sản phẩm</span></a>
+                           <a itemprop="item" href="<?php echo BASE_URL ?>sanpham/danhsach/<?php echo $value['id_category_product'] ?>">
+                           <span itemprop="name"><?php echo $value['product_name'] ?></span></a>
                            <meta itemprop="position" content="2" />
                         </li>
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                            <span itemprop="item">
                            <strong itemprop="name">
-                           Iphone 6
+                           <?php echo $value['name_product'] ?>
                            </strong>
                            </span>
                            <meta itemprop="position" content="3" />
@@ -28,35 +30,35 @@
                   <div class="content_page">
                      <div class="content-right-items margin0">
                         <div class="title-pro-des-ct">
-                           <h1>Iphone 6</h1>
+                           <h1> <?php echo $value['name_product'] ?></h1>
                         </div>
                         <div class="slider-galery ">
                          <div id="sync1" class="owl-carousel owl-theme">
                                   <div class="item">
-                                      <img src="<?php  echo BASE_URL ?>public/image/iphone.png" width="100%">
+                                      <img src="<?php echo BASE_URL ?>public/image/iphone.png" width="100%">
                                   </div>
                                     <div class="item">
-                                      <img src="<?php  echo BASE_URL ?>public/image/iphone1.jpg" width="100%">
+                                      <img src="<?php echo BASE_URL ?>public/image/iphone1.jpg" width="100%">
                                   </div>
 
                                   
                                    
                                   
                                     <div class="item">
-                                      <img src="<?php  echo BASE_URL ?>public/image/iphonex.png" width="100%">
+                                      <img src="<?php echo BASE_URL ?>public/image/iphonex.png" width="100%">
                                   </div>
                                   </div>
 
                                   <div id="sync2" class="owl-carousel owl-theme">
                                      <div class="item">
-                                      <img src="<?php  echo BASE_URL ?>public/image/iphone.png" width="100%">
+                                      <img src="<?php echo BASE_URL ?>public/image/iphone.png" width="100%">
                                   </div>
                                     <div class="item">
-                                      <img src="<?php  echo BASE_URL ?>public/image/iphone1.jpg" width="100%">
+                                      <img src="<?php echo BASE_URL ?>public/image/iphone1.jpg" width="100%">
                                   </div>
                                  
                                     <div class="item">
-                                      <img src="<?php  echo BASE_URL ?>public/image/iphonex.png" width="100%">
+                                      <img src="<?php echo BASE_URL ?>public/image/iphonex.png" width="100%">
                                   </div>
                                   
                                   </div> 
@@ -75,19 +77,19 @@
                                     <div class="status_pro"><span><b>Xuất xứ:</b>  Việt Nam</span></div>
                                  </div>
                                  <div class="color_price">
-                                    <span class="title_price bg_green">Giá bán</span> 17,960,000 <span>vnđ</span>. (GIÁ CHƯA VAT)
+                                    <span class="title_price bg_green">Giá bán</span> <?php echo $value['price_product'] ?> <span>vnđ</span>. (GIÁ CHƯA VAT)
                                     <div class="clear"></div>
                                  </div>
-                                 <div class="color_price">
+                                 <!-- <div class="color_price">
                                     <span class="title_price">Giá cũ</span> 
                                     <del>18,360,000 <span>vnđ</span></del>
-                                 </div>
+                                 </div> -->
                               </div>
                               <div class="clear"></div>
                            </div>
                            <div class="content-pro-des">
                               <div class="content_des">
-                                 <p style="font-size: 16px;font-weight: bold;">Iphone X</p><br />
+                                 <p style="font-size: 16px;font-weight: bold;"> <?php echo $value['name_product'] ?></p><br />
                                   <p> -Bán hàng chính hãng (cam kết hoàn tiền 200% nếu hàng nhái, hàng dựng kém chất lượng)
                                  </p>
                                  <p>-Bảo hành toàn diện 12 tháng theo chế độ hãng</p>
@@ -161,9 +163,9 @@
                            <div class="bx-contact">
                               <span class="title-cnt">Bạn cần hỗ trợ?</span> 
                               <p>Chat với chúng tôi :</p>
-                              <p><img alt="icon skype " src="<?php  echo BASE_URL ?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                              <p><img alt="icon skype " src="<?php  echo BASE_URL ?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                              <p><img alt="icon skype " src="<?php  echo BASE_URL ?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                              <p><img alt="icon skype " src="<?php echo BASE_URL ?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                              <p><img alt="icon skype " src="<?php echo BASE_URL ?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                              <p><img alt="icon skype " src="<?php echo BASE_URL ?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
                               <!--<div class="sup-item item1">
                                  <div>
                                  
@@ -240,7 +242,7 @@
                         </nav>
                      </div>
                   </div>
-                  <div class="product_detail_info">
+                  <!-- <div class="product_detail_info">
                      <div class="module_pro_all" id="productDetail">
                         <div class="box-title">
                            <div class="title-bar">
@@ -270,7 +272,7 @@
                            </p>
                         </div>
                      </div>
-                  </div>
+                  </div> -->
                   <div class="clear"></div>
                   
                   <script type="text/javascript">
@@ -327,7 +329,7 @@
                         <div class="img-right-pro">
                           
                            <a href="sanpham.php">
-                           <img class="lazy img-pro content-<?php  echo BASE_URL ?>public/image" src="<?php  echo BASE_URL ?>public/image/iphone.png" data-original="<?php  echo BASE_URL ?>public/image/iphone.png" alt="Máy in Canon MF229DW" />
+                           <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/image/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                            </a>
 
                            <div class="content-overlay"></div>
@@ -368,7 +370,7 @@
                         <div class="img-right-pro">
                           
                            <a href="sanpham.php">
-                           <img class="lazy img-pro content-<?php  echo BASE_URL ?>public/image" src="<?php  echo BASE_URL ?>public/image/iphone.png" data-original="<?php  echo BASE_URL ?>public/image/iphone.png" alt="Máy in Canon MF229DW" />
+                           <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/image/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                            </a>
 
                            <div class="content-overlay"></div>
@@ -409,7 +411,7 @@
                         <div class="img-right-pro">
                           
                            <a href="sanpham.php">
-                           <img class="lazy img-pro content-<?php  echo BASE_URL ?>public/image" src="<?php  echo BASE_URL ?>public/image/iphone.png" data-original="<?php  echo BASE_URL ?>public/image/iphone.png" alt="Máy in Canon MF229DW" />
+                           <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/image/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                            </a>
 
                            <div class="content-overlay"></div>
@@ -457,6 +459,7 @@
             </div>
             <div class="clear"></div>
          </div>
+         <?php } ?>
          <script>
             jQuery(document).ready(function() {
             
