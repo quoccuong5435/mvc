@@ -13,7 +13,7 @@
                            <meta itemprop="position" content="1" />
                         </li>
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                           <a itemprop="item" href="<?php echo BASE_URL ?>sanpham/danhsach/<?php echo $value['id_category_product'] ?>">
+                           <a itemprop="item" href="<?php echo BASE_URL ?>sanpham/danhmuc/<?php echo $value['id_category_product'] ?>">
                            <span itemprop="name"><?php echo $value['product_name'] ?></span></a>
                            <meta itemprop="position" content="2" />
                         </li>
@@ -35,30 +35,17 @@
                         <div class="slider-galery ">
                          <div id="sync1" class="owl-carousel owl-theme">
                                   <div class="item">
-                                      <img src="<?php echo BASE_URL ?>public/image/iphone.png" width="100%">
-                                  </div>
-                                    <div class="item">
-                                      <img src="<?php echo BASE_URL ?>public/image/iphone1.jpg" width="100%">
+                                      <img src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $value['image_product'] ?>" width="100%">
                                   </div>
 
-                                  
-                                   
-                                  
                                     <div class="item">
-                                      <img src="<?php echo BASE_URL ?>public/image/iphonex.png" width="100%">
+                                      <img src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $value['image_product'] ?>" width="100%">
                                   </div>
                                   </div>
 
                                   <div id="sync2" class="owl-carousel owl-theme">
                                      <div class="item">
-                                      <img src="<?php echo BASE_URL ?>public/image/iphone.png" width="100%">
-                                  </div>
-                                    <div class="item">
-                                      <img src="<?php echo BASE_URL ?>public/image/iphone1.jpg" width="100%">
-                                  </div>
-                                 
-                                    <div class="item">
-                                      <img src="<?php echo BASE_URL ?>public/image/iphonex.png" width="100%">
+                                      <img src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $value['image_product'] ?>" width="100%">
                                   </div>
                                   
                                   </div> 
@@ -242,40 +229,86 @@
                         </nav>
                      </div>
                   </div>
-                  <!-- <div class="product_detail_info">
-                     <div class="module_pro_all" id="productDetail">
-                        <div class="box-title">
-                           <div class="title-bar">
-                              <h3>Chi tiết sản phẩm</h3>
-                           </div>
-                        </div>
-                        <div class="tab_content content_text_product content-module">
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                        </div>
-                     </div>
-                     <div class="module_pro_all" id="inforProduct">
-                        <div class="box-title">
-                           <div class="title-bar">
-                              <h3>Thông số kỹ thuật</h3>
-                           </div>
-                        </div>
-                        <div class="tab_content content_text_product content-module">
-                           <p>CRW - Wallmount:<br />
-                              - Cửa: 1 cánh trước Mica<br />
-                              - Tủ treo tường (Wall mount)<br />
-                              - -Màu sơn tĩnh&nbsp;<br />
-                              - Tủ có đánh dấu số U trên thanh tiêu chuẩn&nbsp;<br />
-                              - Logo COMRACK được dập nổi trên cánh trước của tủ<br />
-                              - Đáy và nóc có đột lỗ chờ đi dây<br />
-                              - Bảo hành 3 năm với tủ , 1 năm với phụ kiện&nbsp;
-                           </p>
-                        </div>
-                     </div>
-                  </div> -->
+                
+                  
                   <div class="clear"></div>
                   
-                  <script type="text/javascript">
+                  
+                  <div class="clear"></div>
+                  <div class="dmsub">
+                     <div class="tags_products desktop">
+                        <div class="tab_link">
+                           <h3 class="title_tab_link">TAGS: </h3>
+                           <div class="content_tab_link"> 
+                            <a href="tag/">Iphone x</a>
+                            <a href="tag/">Iphone 10</a>
+                             <a href="tag/">Iphone 11</a>
+                              <a href="tag/">Iphone Like New</a>
+  
+                            </div>
+                        </div>
+                     </div>
+                  </div>
+                   <?php } ?>
+                  <!-- <div class="content-brank">
+                     <p><strong>Apple </strong>tự hảo<strong>&nbsp;</strong>là thương hiệu Việt Nam về sản phẩm tủ rack 19", tủ cửa lưới, tủ treo tường, bảo vệ thiết bị mạng an toàn, dễ dàng quản lý và vận hành.</p>
+                  </div> -->
+                  <div class="module_pro_all">
+                  <div class="box-title">
+                     <div class="title-bar">
+                        <h3>Sản phẩm liên quan</h3>
+                     </div>
+                  </div>
+                  <div class="pro_all_gird">
+                     <div class="girds_all list_all_other_page ">
+                        <?php foreach($relate  as $key => $values){ ?>
+                        <div class="grids">
+                           <div class="grids_in">
+                              <div class="content">
+                                 <div class="img-right-pro">
+                                    <a href="sanpham.php">
+                                    <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $values['image_product'] ?>" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
+                                    </a>
+                                    <div class="content-overlay"></div>
+                                    <div class="content-details fadeIn-top">
+                                       <ul class="details-product-overlay">
+                                          <li><?php echo $values['description_product'] ?></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="name-pro-right">
+                                    <a href="<?php echo BASE_URL ?>sanpham/chitietsanpham/<?php echo $values['id'] ?>">
+                                       <h3><?php echo $values['name_product'] ?></h3>
+                                    </a>
+                                 </div>
+                                 <div class="add_card">
+                                    <a onclick="return giohang(579);">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
+                                    </a>
+                                 </div>
+                                 <div class="price_old_new">
+                                    <div class="price">
+                                       <span class="news_price"><?php echo number_format( $values['price_product'],0,".",",")."đ" ?> </span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <?php } ?>
+                        <div class="clear"></div>
+                     </div>
+                     <div class="clear"></div>
+                  </div>
+                  <div class="clear"></div>
+               </div>
+               </div>
+              
+               <!--end:left-->
+               <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+         </div>
+         <script type="text/javascript">
                      CloudZoom.quickStart();
                      
                      jQuery(function($) {
@@ -297,169 +330,6 @@
                      });
                      
                   </script>
-                  <div class="clear"></div>
-                  <div class="dmsub">
-                     <div class="tags_products desktop">
-                        <div class="tab_link">
-                           <h3 class="title_tab_link">TAGS: </h3>
-                           <div class="content_tab_link"> 
-                            <a href="tag/">Iphone x</a>
-                            <a href="tag/">Iphone 10</a>
-                             <a href="tag/">Iphone 11</a>
-                              <a href="tag/">Iphone Like New</a>
-  
-                            </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- <div class="content-brank">
-                     <p><strong>Apple </strong>tự hảo<strong>&nbsp;</strong>là thương hiệu Việt Nam về sản phẩm tủ rack 19", tủ cửa lưới, tủ treo tường, bảo vệ thiết bị mạng an toàn, dễ dàng quản lý và vận hành.</p>
-                  </div> -->
-                  <div class="module_pro_all">
-                     <div class="box-title">
-                        <div class="title-bar">
-                           <h3>Sản phẩm liên quan</h3>
-                        </div>
-                     </div>
-                     <div class="pro_all_gird">
-                        <div class="girds_all list_all_other_page ">
-                        <div class="grids">
-                       <div class="grids_in">
-                        <div class="content">
-                        <div class="img-right-pro">
-                          
-                           <a href="sanpham.php">
-                           <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/image/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
-                           </a>
-
-                           <div class="content-overlay"></div>
-                           <div class="content-details fadeIn-top">
-                             <ul class="details-product-overlay">
-                                <li>Màn hình : Super Amoled 4.5k</li>
-                                <li>Độ phân giải : 2K+(1440x3040)</li>
-                                <li>Ram : 8GB</li>
-                                <li>CPU : Android 9.0</li>
-                                <li>GPU : Mali-G76 MP12</li>
-                                <li>SSD : 512MB</li>
-
-                             </ul>
-                            
-                           </div>
-                        </div>
-                        <div class="name-pro-right">
-                           <a href="chitietsp.php">
-                              <h3>Iphone X 64GB</h3>
-                           </a>
-                        </div>
-                        <div class="add_card">
-                           <a onclick="return giohang(579);">
-                           <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                           </a>
-                        </div>
-                        <div class="price_old_new">
-                           <div class="price">
-                              <span class="news_price">17.800.000đ </span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  </div>
-                           <div class="grids">
-                       <div class="grids_in">
-                        <div class="content">
-                        <div class="img-right-pro">
-                          
-                           <a href="sanpham.php">
-                           <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/image/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
-                           </a>
-
-                           <div class="content-overlay"></div>
-                           <div class="content-details fadeIn-top">
-                             <ul class="details-product-overlay">
-                                <li>Màn hình : Super Amoled 4.5k</li>
-                                <li>Độ phân giải : 2K+(1440x3040)</li>
-                                <li>Ram : 8GB</li>
-                                <li>CPU : Android 9.0</li>
-                                <li>GPU : Mali-G76 MP12</li>
-                                <li>SSD : 512MB</li>
-
-                             </ul>
-                            
-                           </div>
-                        </div>
-                        <div class="name-pro-right">
-                           <a href="chitietsp.php">
-                              <h3>Iphone X 64GB</h3>
-                           </a>
-                        </div>
-                        <div class="add_card">
-                           <a onclick="return giohang(579);">
-                           <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                           </a>
-                        </div>
-                        <div class="price_old_new">
-                           <div class="price">
-                              <span class="news_price">17.800.000đ </span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  </div>
-                           <div class="grids">
-                       <div class="grids_in">
-                        <div class="content">
-                        <div class="img-right-pro">
-                          
-                           <a href="sanpham.php">
-                           <img class="lazy img-pro content-image" src="<?php echo BASE_URL ?>public/image/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
-                           </a>
-
-                           <div class="content-overlay"></div>
-                           <div class="content-details fadeIn-top">
-                             <ul class="details-product-overlay">
-                                <li>Màn hình : Super Amoled 4.5k</li>
-                                <li>Độ phân giải : 2K+(1440x3040)</li>
-                                <li>Ram : 8GB</li>
-                                <li>CPU : Android 9.0</li>
-                                <li>GPU : Mali-G76 MP12</li>
-                                <li>SSD : 512MB</li>
-
-                             </ul>
-                            
-                           </div>
-                        </div>
-                        <div class="name-pro-right">
-                           <a href="chitietsp.php">
-                              <h3>Iphone X 64GB</h3>
-                           </a>
-                        </div>
-                        <div class="add_card">
-                           <a onclick="return giohang(579);">
-                           <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                           </a>
-                        </div>
-                        <div class="price_old_new">
-                           <div class="price">
-                              <span class="news_price">17.800.000đ </span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  </div>
-                           <div class="clear"></div>
-                        </div>
-                        <div class="clear"></div>
-                     </div>
-                     <div class="clear"></div>
-                  </div>
-               </div>
-              
-               <!--end:left-->
-               <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-         </div>
-         <?php } ?>
          <script>
             jQuery(document).ready(function() {
             

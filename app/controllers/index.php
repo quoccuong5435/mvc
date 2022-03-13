@@ -29,12 +29,7 @@
        
 
 
-        public function detail_post()
-        {
-            $this -> load -> view('interface/news/detail_post');
-            $this -> load -> view('interface/layouts/footer');
-        }
-
+       
         public function contact()
         {
             $this -> load -> view('interface/home/contact');

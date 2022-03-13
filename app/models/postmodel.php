@@ -44,5 +44,15 @@
             $sql = "select * from $table_1, $table_2 where $condition";
             return $this -> db -> select($sql);
         }
+        public function relate($table_product, $table_category, $condition_relate)
+        {
+            $sql = "SELECT * from  $table_category,$table_product  where $condition_relate ";
+            return $this -> db -> select($sql);
+        }
+        public function detail($table_post, $table_category, $condition)
+        {
+            $sql = "SELECT * from $table_post, $table_category  where $condition ";
+            return $this -> db -> select($sql);
+        }
     }
 ?>

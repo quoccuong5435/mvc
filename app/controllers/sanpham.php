@@ -15,7 +15,7 @@
         $this->load->view('interface/layouts/header',$data);
     }
 
-        public  function danhsach()
+        public  function index()
         {
             $table_product = "product";
             $product_model = $this -> load -> model('productmodel');
@@ -42,6 +42,12 @@
          $condition = "$table_product.id_category_product = $table_category.id and $table_product.id = $id";
          $product_model = $this -> load -> model('productmodel');
          $data['detail'] =$product_model -> selectCategoryById($table_product, $table_category, $condition);
+         foreach($data['detail']  as $key  => $value)
+         {
+            $id_category = $value['id_category_product'];
+         }
+         $condition_relate = "$table_product.id_category_product = $table_category.id and $table_category.id = $id_category and $table_product.id not in('$id')  ";
+         $data['relate'] =$product_model -> relate($table_product, $table_category, $condition_relate);
          $this -> load -> view('interface/product/detail_product',$data);
          $this -> load -> view('interface/layouts/footer');
      }

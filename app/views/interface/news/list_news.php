@@ -51,7 +51,7 @@
                      <?php foreach($listpost as $key => $value) {?>
                      <li class="lists ">
                         <div class="img-list">
-                           <a href="tin-tuc/so-sanh-cong-nghe-hien-thi-3lcd-va-dlp-425.html">
+                           <a href="<?php echo BASE_URL  ?>tintuc/chitiettintuc/<?php echo $value['id'] ?>">
                            <img style="height:200px; width: 200px;" src="<?php  echo BASE_URL ?>public/uploads/post/<?php echo $value['image_post'] ?>" alt="So sánh công nghệ hiển thị 3LCD và DLP" class="img-list-in">
                            </a>
                         </div>
@@ -59,7 +59,7 @@
                            <div class="content-list_inm">
                               <div class="title-list">
                                  <h3>
-                                    <a href="tin-tuc/so-sanh-cong-nghe-hien-thi-3lcd-va-dlp-425.html"><?php echo $value['name_post'] ?></a>
+                                    <a href="<?php echo BASE_URL  ?>tintuc/chitiettintuc/<?php echo $value['id'] ?>"><?php echo $value['name_post'] ?></a>
                                  </h3>
                                  <p class="list-news-status-p">
                                     <a title="Thiết bị văn phòng"><?php echo $value['title'] ?></a> | <a title="26-12-2017" >26-12-2017</a>
@@ -68,7 +68,7 @@
                               <div class="content-list-in">
                                  <p><span style="font-size:16px"><?php echo substr( $value['description_post'],0,200) ?></span></p>
                                 </div>
-                              <div class="xt"><a href="tin-tuc/so-sanh-cong-nghe-hien-thi-3lcd-va-dlp-425.html">Xem thêm</a></div>
+                              <div class="xt"><a href="<?php echo BASE_URL  ?>tintuc/chitiettintuc/<?php echo $value['id'] ?>">Xem thêm</a></div>
                            </div>
                         </div>
                         <?php } ?>
