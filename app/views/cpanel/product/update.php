@@ -31,7 +31,20 @@
       <img src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $value['image_product'] ?>" alt="">
       <input type="file" class="form-control" value="<?php echo $value['image_product'] ?>" name="image_product"  >
     </div>
-   
+    <div class="form-group">
+      <label for="email">Sản phẩm hot</label></label>
+      <select class="form-control" name="hot_product">
+      <?php if($value['hot_product']== 0){?>
+        <option selected value="0">Không</option>
+        <option value="1">Có</option>
+        <?php }
+          else{?>
+            <option  value="0">Không</option>
+            <option selected value="1">Có</option>
+            <?php } ?>
+        
+      </select>
+    </div>
     <div class="form-group">
       <label for="email">Tên danh mục sản phẩm</label></label>
       <select class="form-control" name="id_category_product">

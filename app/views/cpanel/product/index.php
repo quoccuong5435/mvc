@@ -21,6 +21,7 @@
         <th>Quantily</th>
         <th>Image</th>
         <th>Category</th>
+        <th>HOT</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -38,6 +39,15 @@
         <td><?php echo $value['quantily_product'] ?></td>
         <td><img src="<?php echo BASE_URL ?>public/uploads/product/<?php echo $value['image_product']?>" height="100px" width="100" alt=""></td>
         <td><?php echo $value['product_name']?></td>
+        <?php if($value['hot_product']==0){
+            ?>
+            <td>Không</td>          
+        <?php
+          }else{
+              ?>
+           <td>Có</td>
+           <?php
+          } ?>
         <td><a href="<?php echo BASE_URL ?>product/edit_product/<?php echo $value['id'] ?>".>Cập nhật</a>|| <a href="<?php echo BASE_URL ?>product/delete_product/<?php echo $value['id'] ?>">Xóa</a></td>
       </tr>
       <?php } ?>

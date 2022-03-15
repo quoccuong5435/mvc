@@ -143,14 +143,16 @@
         {
             $table ="product";
             $name = $_POST['name_product'];
+            $hot_product = $_POST['hot_product'];
             $price = $_POST['price_product'];
             $quantily = $_POST['quantily_product'];
             $description = $_POST['description_product'];
+            $image = $_FILES['image_product']['name'];
             $tmp_image = $_FILES['image_product']['tmp_name'];
             $div = explode('.',$_FILES['image_product']['name']);
             $file_ext = strtolower(end($div));
             $unique_image = $div[0].time().'.'.$file_ext;
-            $path_uploads = "public/uploads/product/".$unique_image;
+            $path_uploads = "public/uploads/product/". $unique_image;
             $id_category = $_POST['id_category_product'];
 
             $data = array(
@@ -159,7 +161,8 @@
                 'quantily_product' => $quantily,
                 'description_product' => $description,
                 'image_product' => $unique_image,
-                'id_category_product' => $id_category
+                'id_category_product' => $id_category,
+                'hot_product' => $hot_product
             );
 
             $productmodel = $this->load->model('productmodel');
@@ -218,6 +221,7 @@
             $condition = "$table.id = $id";
             $productmodel = $this->load->model('productmodel');
             $name =  $_POST['name_product'];
+            $hot_product = $_POST['hot_product'];
             $price = $_POST['price_product'];
             $description = $_POST['description_product'];
             $quantily = $_POST['quantily_product'];
@@ -240,7 +244,8 @@
                     'quantily_product' => $quantily,
                     'description_product' => $description,
                     'image_product' => $unique_image,
-                    'id_category_product' => $id_category
+                    'id_category_product' => $id_category,
+                    'hot_product' => $hot_product
                 );
                 move_uploaded_file($tmp_image,$path_uploads);
             }
@@ -251,7 +256,8 @@
                     'price_product'=> $price,
                     'quantily_product' => $quantily,
                     'description_product' => $description,
-                    'id_category_product' => $id_category
+                    'id_category_product' => $id_category,
+                    'hot_product' => $hot_product
                 );
             }
             $result = $productmodel ->updateproduct($table, $data, $condition);

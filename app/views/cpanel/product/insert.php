@@ -28,7 +28,15 @@
       <label for="email">Hình ảnh</label>
       <input type="file" class="form-control" name="image_product"  >
     </div>
-   
+    <div class="form-group">
+      <label for="email">Sản phẩm hot</label></label>
+      <select class="form-control" name="hot_product">
+      
+        <option value="0">Không</option>
+        <option value="1">Có</option>
+      </select>
+    </div>
+
     <div class="form-group">
       <label for="email">Tên danh mục sản phẩm</label></label>
       <select class="form-control" name="id_category_product">

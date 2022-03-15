@@ -34,7 +34,7 @@
 
         public function selectWhere($table_1, $table_2)
         {
-            $sql = "SELECT * FROM $table_1, $table_2 where $table_1.id = $table_2.id_category_product ";
+            $sql = "SELECT * FROM $table_1, $table_2 where $table_1.id = $table_2.id_category_product order by hot_product desc";
             return $this -> db -> select($sql);
         }
         public function selectCategoryById($table_1, $table_2,$condition)
@@ -45,7 +45,18 @@
 
         public function relate($table_product, $table_category, $condition_relate)
         {
-            $sql = "SELECT * from  $table_category,$table_product  where $condition_relate ";
+            $sql = "SELECT * from  $table_category,$table_product  where $condition_relate  limit 4";
+            return $this -> db -> select($sql);
+        }
+
+        public function selectProductHot($table)
+        {
+            $sql ="select * from $table where hot_product ='1'";
+            return $this -> db  -> select($sql);
+        }
+        public function list_product_index($table)
+        {
+            $sql = "SELECT * FROM $table limit 10";
             return $this -> db -> select($sql);
         }
     }

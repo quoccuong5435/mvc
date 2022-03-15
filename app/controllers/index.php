@@ -7,16 +7,24 @@
             parent::__construct();
             $table_category ="category_product";
             $table_post = "category_post";
-            $post_model = $this -> load -> model('postmodel');
+            $this -> post_model = $post_model = $this -> load -> model('postmodel');
             $data['post'] = $post_model -> list_post($table_post);
             $category_model = $this -> load -> model('categorymodel');
-            $data['category'] = $category_model -> category($table_category);
+            $this->data['category'] =$data['category'] = $category_model -> category($table_category);
             $this -> load -> view('interface/layouts/header',$data);
         }
          public function index()
          {
-            $this -> load -> view('interface/layouts/slider');
-            $this -> load -> view('interface/home/index');
+            $table ="product";
+            $table_post= 'post';
+            $data['category'] = $this->data['category'];
+            $product_model = $this -> load -> model('productmodel');
+            $data['list_product']= $product_model ->list_product_index($table);
+            $condition ="order by id desc";
+            $data['hot_product']  = $product_model -> selectProductHot($table);
+            $data['list_post'] = $this -> post_model -> selectSort($table_post, $condition);
+            $this -> load -> view('interface/layouts/slider',$data);
+            $this -> load -> view('interface/home/index',$data);
             $this -> load -> view('interface/layouts/footer');
          }
 

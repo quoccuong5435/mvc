@@ -22,6 +22,11 @@
             $sql = "select * from $table where $condition ";
             return $this ->db ->select($sql);
         }
+        public function selectSort($table, $condition)
+        {
+            $sql = "select * from $table  $condition ";
+            return $this ->db ->select($sql);
+        }
 
         public function update_post($table,$data, $condition)
         {
