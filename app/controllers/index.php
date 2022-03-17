@@ -20,7 +20,7 @@
             $data['category'] = $this->data['category'];
             $product_model = $this -> load -> model('productmodel');
             $data['list_product']= $product_model ->list_product_index($table);
-            $condition ="order by id desc";
+            $condition ="order by id desc limit 5";
             $data['hot_product']  = $product_model -> selectProductHot($table);
             $data['list_post'] = $this -> post_model -> selectSort($table_post, $condition);
             $this -> load -> view('interface/layouts/slider',$data);

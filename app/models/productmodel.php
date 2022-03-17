@@ -45,7 +45,7 @@
 
         public function relate($table_product, $table_category, $condition_relate)
         {
-            $sql = "SELECT * from  $table_category,$table_product  where $condition_relate  limit 4";
+            $sql = "SELECT * from  $table_category,$table_product  where $condition_relate  limit 5";
             return $this -> db -> select($sql);
         }
 
