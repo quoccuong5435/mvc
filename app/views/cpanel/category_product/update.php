@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
       <label for="pwd">Thông tin:</label>
-      <input type="text" class="form-control" value="<?php echo $value['description']; ?>" name="description" id="description">
+      <textarea type="text" class="form-control" value="<?php echo $value['description']; ?>" name="description" id="editor"></textarea>
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

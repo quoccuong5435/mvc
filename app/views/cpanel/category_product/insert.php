@@ -18,7 +18,7 @@
     </div>
     <div class="form-group">
       <label for="pwd">Thông tin:</label>
-      <input type="text" class="form-control" name="description" id="description">
+      <textarea id="editor" type="text" class="form-control" name="description" id="description"></textarea>
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

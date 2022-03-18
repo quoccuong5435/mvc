@@ -37,7 +37,7 @@
     <div class="form-group">
       <label for="email">Mô tả sản phẩm</label>
       <br>
-      <textarea  id=""  rows="10" value name="description_post"><?php echo $value['description_post'] ?></textarea>
+      <textarea  id="editor" rows="10" value name="description_post"><?php echo $value['description_post'] ?></textarea>
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

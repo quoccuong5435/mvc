@@ -164,7 +164,9 @@
 
                                         </ul>
                                         </li>
-                                    <li class=''><a href='lienhe.php'>Liên hệ</a></li>
+                                    <li class=''><a href="<?php echo BASE_URL ?>index/contact">Liên hệ</a></li>
+                                    <li><a href="<?php echo BASE_URL ?>giohang">Giỏ hàng</a></li>
+                                    <li><a href="<?php echo BASE_URL ?>khachhang">Đăng nhập</a></li>
                                 </ul>
                             </div>
                         </div>

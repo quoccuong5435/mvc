@@ -53,7 +53,7 @@
     <div class="form-group">
       <label for="email">Mô tả sản phẩm</label>
       <br>
-      <textarea  id=""  rows="10" name="description_product"></textarea>
+      <textarea id="editor"  rows="10" name="description_product"></textarea>
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>

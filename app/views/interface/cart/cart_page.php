@@ -174,7 +174,7 @@
                                     <div class="row">
                                        <div class="input">
                                           <label>Nội dung: <span style="color:red;">*</span></label>
-                                          <textarea type="text" name="noidung" class="clsipa"></textarea>
+                                          <textarea id="editor" type="text" name="noidung" class="clsipa"></textarea>
                                        </div>
                                        <div class="clear"></div>
                                     </div>

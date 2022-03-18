@@ -43,12 +43,11 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Đơn hàng
+                    <a class="dropdown-toggle" data-toggle="dropdown"href="<?php echo BASE_URL ?>order">Đơn hàng
                     <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                    <li><a href="<?php echo BASE_URL ?>category">List Category</a></li>
-                    <li><a href="<?php echo BASE_URL ?>category/insert">Add Category</a></li>
-                    <li><a href="#">Search Category</a></li>
+                    <li><a href="<?php echo BASE_URL ?>order">List Category</a></li>
+                    
                     </ul>
                 </li>
                 </ul>

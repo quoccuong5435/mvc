@@ -13,15 +13,17 @@
  foreach ($category as $key => $value) {
      ?>
 <form action="<?php echo BASE_URL?>category/update_category/<?php echo $value['id'] ?>" method="POST">
+<div class="col-md-12">
     <div class="form-group">
         <label for="">Title</label>
         <input type="text" class="form-control" value="<?php echo $value['title']; ?>"  name="title" placeholder="Input field">
     </div>
     <div class="form-group">
         <label for="">Description</label>
-        <input type="text" class="form-control" value="<?php echo $value['description'] ?>"  name="description" placeholder="Input field">
+        <textarea id="editor" type="text" class="form-control" value="<?php echo $value['description'] ?>"  name="description" placeholder="Input field"></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
+</div>
 </form>
 <?php
  }?>
