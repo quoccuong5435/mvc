@@ -9,9 +9,7 @@
                 <div class="box-title">
                     <div class="title-bar">
                         <h1>Sản phẩm HOT</h1>
-                        <a class="read_more" href="sanpham.php">
-                  Xem thêm
-                  </a>
+                       
                     </div>
                 </div>
                 <div class="pro_all_gird">
@@ -74,9 +72,7 @@
                 <div class="box-title">
                     <div class="title-bar">
                         <h1><?php echo $value['product_name'] ?></h1>
-                        <a class="read_more" href="sanpham.php">
-                  Xem thêm
-                  </a>
+                       
                     </div>
                 </div>
                 <div class="pro_all_gird">

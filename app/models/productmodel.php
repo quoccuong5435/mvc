@@ -45,18 +45,18 @@
 
         public function relate($table_product, $table_category, $condition_relate)
         {
-            $sql = "SELECT * from  $table_category,$table_product  where $condition_relate  limit 5";
+            $sql = "SELECT * from  $table_category,$table_product  where $condition_relate limit 4";
             return $this -> db -> select($sql);
         }
 
         public function selectProductHot($table)
         {
-            $sql ="select * from $table where hot_product ='1'";
+            $sql ="select * from $table where hot_product ='1' limit 5";
             return $this -> db  -> select($sql);
         }
         public function list_product_index($table)
         {
-            $sql = "SELECT * FROM $table limit 10";
+            $sql = "SELECT * FROM $table ";
             return $this -> db -> select($sql);
         }
     }

@@ -29,7 +29,7 @@
                   <div class="content_page">
                      <div class="box-title">
                         <div class="title-bar">
-                           <h1><?php echo $value['name_post'] ?></h1>
+                           <h1 style="font-size: large;"><?php echo $value['name_post'] ?></h1>
                         </div>
                      </div>
                      <div class="content_text">
@@ -40,7 +40,7 @@
                   <div class="module_pro_all">
                      <div class="box-title">
                         <div class="title-bar">
-                           <h3>Sản phẩm liên quan</h3>
+                           <h3>Tin tức liên quan</h3>
                         </div>
                      </div>
                      <div class="pro_all_gird">

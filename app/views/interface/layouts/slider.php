@@ -46,8 +46,8 @@
                                     <img src="<?php echo BASE_URL ?>public/uploads/post/<?php echo $value['image_post'] ?>">
                                 </div>
                                 <div class="col-md-8 col-xs-8 col-sm-8">
-                                    <h4><?php echo $value['name_post'] ?></h4>
-                                    <p><?php echo substr($value['description_post'],0,60) ?></p>
+                                    <h4> <a href="<?php echo BASE_URL ?>tintuc/chitiettintuc/<?php echo $value['id'] ?>"><?php echo $value['name_post'] ?></a></h4>
+                                    
                                      </div>
                             </div>
                             <hr>

@@ -86,9 +86,18 @@
                               </tr>
                           
                            <?php }
+                           
                      ?>
+                     <tr>
+                              <td colspan="7" class="textright_text">
+                                 <div class="sum_price_all">
+                                    <span style="text-align: center;margin-left: 50%;color: red"  class="text_price"><?php echo number_format( $total,0,".",","). "đ" ?></span>
+                                   
+                                 </div>
+                              </td>
+                           </tr>
                       </form>
-                          
+                           
                         </tbody>
                         <?php }else {  ?>
                            <tr>
@@ -129,7 +138,7 @@
                            </ul>
                            <div class="hiring-box">
                               <strong class="title">Chào bạn!</strong>
-                              <p>Mọi thắc mắc bạn hãy gửi về mail của chúng tôi <strong>3tmobile@webextrasite.com</strong> chúng tôi sẽ giải đáp cho bạn.</p>
+                              <p>Mọi thắc mắc bạn hãy gửi về mail của chúng tôi chúng tôi sẽ giải đáp cho bạn.</p>
                               <p><a href="." class="arrow-link"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Về trang chủ</a></p>
                            </div>
                         </div>

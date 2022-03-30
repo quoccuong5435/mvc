@@ -29,7 +29,7 @@
                               <div class="row">
                                  <div class="input">
                                     <label>Số điện thoại: <span style="color:red;">*</span></label>
-                                    <input type="text" name="customer_phone" require class="clsip">
+                                    <input type="phone" name="customer_phone" require class="clsip">
                                  </div>
                                  <div class="clear"></div>
                               </div>
@@ -45,7 +45,7 @@
                               <div class="row">
                                  <div class="input">
                                     <label>Email: <span style="color:red;">*</span></label>
-                                    <input type="text" name="customer_email" required class="clsip">
+                                    <input type="email" name="customer_email" required class="clsip">
                                  </div>
                                  <div class="clear"></div>
                               </div>

@@ -54,7 +54,7 @@
                 <div class="header_top">
                     <div class="bg_in">
                         <div class="logo">
-                            <a href="."><img src="<?php  echo BASE_URL ?>public/image/logohere.jpeg" width="250" height="100" alt="logohere.jpeg" /></a>
+                            <a href="."><img src="<?php  echo BASE_URL ?>public/image/logo1.png" width="200" height="100" alt="logohere.jpeg" /></a>
                         </div>
                         <nav class="menu_top">
                             <form class="search_form" method="get" action="">
@@ -125,7 +125,7 @@
                             <div id='cssmenu'>
                                 <ul>
                                     <li class='active'><a href='<?php echo BASE_URL ?>index'>Trang chủ</a></li>
-                                    <li class=''><a href='chitiettin.php'>Giới thiệu</a></li>
+                                    
                                     <li class=''>
 
                                         <a href='<?php echo BASE_URL ?>sanpham/'>Sản phẩm</a>
@@ -136,10 +136,10 @@
 
                                              ?>
                                             <li><a href='<?php echo BASE_URL ?>sanpham/danhmuc/<?php echo $value['id'] ?>'><span><?php echo $value['product_name'] ?></span></a>
-                                                <ul>
+                                                <!-- <ul>
                                                     <li><a href='sanpham.php'>Iphone</a></li>
                                                     <li><a href='sanpham.php'>Macbook</a></li>
-                                                </ul>
+                                                </ul> -->
                                             </li>
                                             <?php }?>
 

@@ -1,4 +1,4 @@
-<h3 style="text-align: center;">Danh mục sản phẩm</h3>
+<h3 style="text-align: center;">Danh mục</h3>
 
 <div class="container">  
 <?php
@@ -31,7 +31,7 @@
       <tr>
         <td><?php echo $i ?></td>
         <td><?php echo $value['name_post'] ?></td>
-        <td><?php echo $value['description_post'] ?></td>
+        <td><?php echo substr($value['description_post'], 0, 300) ?></td>
         <td><img src="<?php echo BASE_URL ?>public/uploads/post/<?php echo $value['image_post']?>" height="100px" width="100" alt=""></td>
         <td><?php echo $value['title']?></td>
         <td><a href="<?php echo BASE_URL ?>post/edit_post/<?php echo $value['id'] ?>".>Cập nhật</a>|| <a href="<?php echo BASE_URL ?>post/delete_post/<?php echo $value['id'] ?>">Xóa</a></td>

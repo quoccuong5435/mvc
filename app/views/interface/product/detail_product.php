@@ -64,7 +64,7 @@
                                     <div class="status_pro"><span><b>Xuất xứ:</b>  Việt Nam</span></div>
                                  </div>
                                  <div class="color_price">
-                                    <span class="title_price bg_green">Giá bán</span> <?php echo $value['price_product'] ?> <span>vnđ</span>. (GIÁ CHƯA VAT)
+                                    <span class="title_price bg_green">Giá bán</span> <?php echo $value['price_product'] ?> <span>vnđ</span>
                                     <div class="clear"></div>
                                  </div>
                                  <!-- <div class="color_price">
@@ -77,6 +77,7 @@
                            <div class="content-pro-des">
                               <div class="content_des">
                                  <p style="font-size: 16px;font-weight: bold;"> <?php echo $value['name_product'] ?></p><br />
+                                 <p><?php echo $value['description_product'] ?></p><br />
                                   <p> -Bán hàng chính hãng (cam kết hoàn tiền 200% nếu hàng nhái, hàng dựng kém chất lượng)
                                  </p>
                                  <p>-Bảo hành toàn diện 12 tháng theo chế độ hãng</p>
@@ -87,22 +88,29 @@
                               </div>
                            </div>
                            <div class="ct">
-                              <div class="number_price">
+                              <!-- <div class="number_price">
                                  <div class="custom pull-left">
-                                    <button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) &amp;&amp; qty > 0 ) result.value--;return false;" class="reduced items-count" type="button">-</button>
+                                    <button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty ) ) qty > 0 ; result.value--;return false;" class="reduced items-count" type="button">-</button>
                                     <input type="text" class="input-text qty" title="Qty" value="1" maxlength="12" id="qty" name="qty">
                                     <button onclick="var result = document.getElementById('qty'); var qty = result.value; if( !isNaN( qty )) result.value++;return false;" class="increase items-count" type="button">+</button>
                                     <div class="clear"></div>
                                  </div>
                                  <div class="clear"></div>
-                              </div>
+                              </div> -->
                               <div class="wp_a">
-                                 <a onclick="return giohang(579);" class="view_duan">
-                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text-mobile-buy">Mua hàng</span>
-                                 </a>
-                                 <a href="tel:090 66 99 038" class="view_duan">
+                              <form action="<?php echo BASE_URL ?>giohang/themgiohang" method="POST" enctype="multipart/form-data">
+                                 <input type="hidden" name="id" value="<?php echo $value['id'] ?>">  
+                                 <input type="hidden" name="name_product" value="<?php echo $value['name_product'] ?>">
+                                 <input type="hidden" name="price_product" value="<?php echo  $value['price_product'] ?>">
+                                 <input type="hidden" name="quantily_product" value="1">
+                                 <input type="hidden" name="image_product" value="<?php echo $value['image_product'] ?>">
+                                 <!-- <a onclick="return giohang(579);" class="view_duan"> -->
+                                 <input type="submit"class="fa fa-shopping-cart btn btn-success"value="Đặt hàng" aria-hidden="true" > </input>
+                                 <!-- </a> -->
+                              </form>
+                                 <!-- <a href="tel:090 66 99 038" class="view_duan">
                                  <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Gọi ngay</span>
-                                 </a>
+                                 </a> -->
                                  <div class="clear"></div>
                               </div>
                               <div class="clear"></div>
@@ -134,7 +142,7 @@
                               <div class="info-setup">
                                  <div class="row-setup">
                                     <p style="text-align:justify">Quý khách vui lòng liên hệ với nhân viên bán hàng theo số điện thoại Hotline sau :</p>
-                                    <p><span style="color:#d50100">0932 023 992</span>&nbsp;để biết thêm chi tiết về Phụ kiện sản phẩm.</p>
+                                    <p><span style="color:#d50100">0327227272</span>&nbsp;để biết thêm chi tiết về Phụ kiện sản phẩm.</p>
                                  </div>
                               </div>
                            </div>
@@ -150,9 +158,7 @@
                            <div class="bx-contact">
                               <span class="title-cnt">Bạn cần hỗ trợ?</span> 
                               <p>Chat với chúng tôi :</p>
-                              <p><img alt="icon skype " src="<?php echo BASE_URL ?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                              <p><img alt="icon skype " src="<?php echo BASE_URL ?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                              <p><img alt="icon skype " src="<?php echo BASE_URL ?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                              <p><img alt="icon skype " src="<?php echo BASE_URL ?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">quoccuong5435@gmail.com</a></p>
                               <!--<div class="sup-item item1">
                                  <div>
                                  
@@ -220,9 +226,6 @@
                                  <a onclick="return giohang(371);" class="view_duan">
                                  <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text-mobile-buy">Mua hàng</span>
                                  </a>
-                                 <a href="tel:090 66 99 038" class="view_duan">
-                                 <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Gọi ngay</span>
-                                 </a>
                                  <div class="clear"></div>
                               </div>
                            </div>
@@ -234,7 +237,7 @@
                   <div class="clear"></div>
                   
                   
-                  <div class="clear"></div>
+                  <!-- <div class="clear"></div>
                   <div class="dmsub">
                      <div class="tags_products desktop">
                         <div class="tab_link">
@@ -248,7 +251,7 @@
                             </div>
                         </div>
                      </div>
-                  </div>
+                  </div> -->
                    <?php } ?>
                   <!-- <div class="content-brank">
                      <p><strong>Apple </strong>tự hảo<strong>&nbsp;</strong>là thương hiệu Việt Nam về sản phẩm tủ rack 19", tủ cửa lưới, tủ treo tường, bảo vệ thiết bị mạng an toàn, dễ dàng quản lý và vận hành.</p>

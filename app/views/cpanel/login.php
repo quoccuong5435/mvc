@@ -44,7 +44,16 @@
                 <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
                 <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
             </form> -->
-            
+            <?php
+       if(!empty($_GET['msg']))
+       {
+         $msg = unserialize(urldecode($_GET['msg']));
+         foreach($msg as $key => $value)
+         {
+           echo '<span style="color:blue;font-weight:bold">'.$value."</span>";
+         }
+       }   
+    ?> 
             <form action="/signup/" class="form-signup">
                 <div class="social-login">
                     <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>

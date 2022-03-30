@@ -13,7 +13,7 @@
  
   <form action="<?php echo BASE_URL ?>post/insert_post" method="POST" enctype="multipart/form-data">
     <div class="form-group">
-      <label for="email">Tên sản phẩm</label>
+      <label for="email">Tiêu đề bài viết</label>
       <input type="text" class="form-control" name="name_post">
     </div>
     <div class="form-group">
@@ -22,7 +22,7 @@
     </div>
    
     <div class="form-group">
-      <label for="email">Tên danh mục sản phẩm</label></label>
+      <label for="email">Tên danh mục bài viết</label></label>
       <select class="form-control" name="id_category_post">
       <?php  foreach($category_post as $key => $value)
           {
@@ -35,7 +35,7 @@
     </div>
     
     <div class="form-group">
-      <label for="email">Mô tả sản phẩm</label>
+      <label for="email">Content</label>
       <br>
       <textarea  id="editor"  rows="10" name="description_post"></textarea>
     </div>

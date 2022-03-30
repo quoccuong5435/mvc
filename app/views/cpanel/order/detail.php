@@ -27,7 +27,6 @@
     <tbody>
      <?php 
     
-    
      foreach($user as $key => $value){
         
       
@@ -61,10 +60,12 @@
      <?php 
      $i = 0;
      $total= 0;
+     
      foreach($details as $key => $value){
         $i++;
         $subtotoal  = $value['price_product'] * $value['product_quantily'];
         $total += $subtotoal;
+        
        ?>
       <tr>
         <td><?php echo $i ?></td>
@@ -79,7 +80,11 @@
       <?php } ?>
       <form action="<?php echo BASE_URL ?>order/order_confirm/<?php echo $value['order_code'] ?>" method="post">
       <tr>
+        
+
           <td colspan="2" align="center"><input type="submit" value="Xử lý đơn hàng"></input></td>
+         
+           
           <td style="font-weight: bold;font-size: 20px;color: red;" align="right" colspan="6">Tổng tiền: <?php echo number_format($total,0,",",".")."đ" ?></td>
       </tr>
       </form>
